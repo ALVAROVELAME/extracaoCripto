@@ -1,12 +1,21 @@
-function Home() {
-    return 
-    <>
-        <h1>Home</h1>
-        <h2>meu scraping </h2>
-        <div>
-            <p>Ola, Mundo!</p>
-        </div>
-    </>
-}
+const axios = require('axios');
+const cheerio = require('cheerio');
 
-export default Home;
+const url = 'https://coinmarketcap.com/';
+
+axios.get(url)
+  .then(response => {
+    const html = response.data;
+    const $ = cheerio.load(html);
+
+    // Seletor para encontrar os elementos <td>
+    const tdElements = $('td');
+
+    // Iterar sobre os elementos <td>
+    tdElements.each((index, element) => {
+      console.log($(element).text());
+    });
+  })
+  .catch(error => {
+    console.log(error);
+  });
