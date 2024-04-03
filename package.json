@@ -1,0 +1,21 @@
+{
+  "name": "extracaocripto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@next/swc-win32-x64-msvc": "^14.1.4",
+    "axios": "^1.6.8",
+    "cheerio": "^1.0.0-rc.12",
+    "fs": "^0.0.1-security",
+    "next": "^14.1.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
