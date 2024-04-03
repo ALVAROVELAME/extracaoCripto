@@ -1,4 +1,4 @@
-// pages/api/scrapeData.js
+// pages/api/updateData.js
 
 import axios from 'axios';
 import cheerio from 'cheerio';
